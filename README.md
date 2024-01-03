@@ -1,5 +1,5 @@
 # GH_workflows_analyzer
-simple scripts to analyze your GH workflows
+simple scripts to analyze your GH workflows from your opensource project 
 
 
 ## Scripts 
@@ -7,7 +7,7 @@ simple scripts to analyze your GH workflows
 ### get_CI_report.py
 This script will allow you to fetch information about the workflow from your repository and returns the number of workflows that have succeeded or failed.
 
-> get_CI_report.py -token {GH_token} -owner repoOwner-repo repoName -action actionName -limit 100
+> get_CI_report.py -token {GH_token} -owner allegro -repo hermes -action CI -limit 50 -date_oldest 2023-10-01 -list_workflows true
 
 ```
 > script started with arguments: owner: allegro, repo: hermes, action: CI, limit: 100
