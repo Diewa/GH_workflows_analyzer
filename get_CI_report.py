@@ -83,13 +83,13 @@ def print_summary(attempt_statuses):
         "ignored": sum(1 for status in attempt_statuses if status in ignored_statuses)
     }
     statuses = count_status_occurrences(attempt_statuses)
-    print(
-        f'Number of success: {statuses["success"]}, number of failed: {statuses["failed"]}, number of ignored: {statuses["ignored"]}')
+    print(f'Number of success: {statuses["success"]}, number of failed: {statuses["failed"]}, number of ignored: {statuses["ignored"]}')
+    print(f'success ratio: {statuses["success"]/attempts_number}')
 
 def list_included_workflows(included_workflows):
     print("list of all included workflows")
     for workflow in included_workflows:
-        print('workflow_id: ', workflow['id'], 'workflow_url: ', workflow['url'])
+        print(workflow['html_url'])
 
 workflows = get_all_workflows()
 attempt_statuses = get_status_for_every_attempt(workflows)
